@@ -1,0 +1,551 @@
+:root {
+    --teal-900: #134e4a;
+    --teal-800: #115e59;
+    --teal-700: #0f766e;
+    --white: #ffffff;
+    --gray-200: #e5e7eb;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f4f6;
+    color: var(--white);
+}
+
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--teal-900);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 300px;
+}
+
+.login-form select,
+.login-form input,
+.login-form button {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.navigation {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-button {
+    background: transparent;
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.nav-button.active {
+    background-color: var(--white);
+    color: var(--teal-900);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logout-button {
+    background-color: var(--white);
+    color: var(--teal-900);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.section-indicator {
+    background-color: var(--teal-800);
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.card {
+    background-color: var(--teal-800);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    padding: 1rem;
+    border-bottom: 1px solid var(--teal-700);
+}
+
+.card-header h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.citizens-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.citizen-card {
+    background-color: var(--teal-800);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.citizen-photo {
+    width: 100%;
+    height: 200px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.person-info {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+}
+
+.photo-upload img {
+    width: 200px;
+    height: 200px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.input-group {
+    margin-bottom: 1rem;
+}
+
+.input-group + .input-group {
+    margin-top: 1rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input, .input-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--teal-700);
+    background-color: var(--teal-900);
+    color: var(--white);
+}
+
+.property-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.vehicle-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.vehicle-buttons button {
+    background-color: var(--teal-700);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+
+.vehicle-buttons button:hover {
+    background-color: var(--teal-900);
+}
+
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.vehicle-card {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.vehicle-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.vehicle-name {
+    font-weight: bold;
+}
+
+.vehicle-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+.edit-btn, .info-btn, .delete-btn {
+    padding: 0.25rem 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.edit-btn {
+    background-color: var(--teal-700);
+    color: var(--white);
+}
+
+.info-btn {
+    background-color: var(--white);
+    color: var(--teal-900);
+}
+
+.delete-btn {
+    background-color: #e53e3e;
+    color: var(--white);
+}
+
+.car-type-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin: 0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    background-color: var(--teal-700);
+    color: var(--white);
+}
+
+.car-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0.25rem;
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 0.25rem;
+}
+
+.color-btn.selected {
+    border-color: var(--white);
+}
+
+.evidence-photo {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+#evidencePhotos {
+    margin-bottom: 0.5rem;
+}
+
+.vehicle-info {
+    font-size: 0.9rem;
+}
+
+.properties-list {
+    margin-top: 1rem;
+}
+
+.property-item {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.property-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.property-images img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+}
+
+.comment-input, .report-input {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+textarea {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--teal-700);
+    background-color: var(--teal-900);
+    color: var(--white);
+    resize: vertical;
+    min-height: 80px;
+}
+
+.send-button {
+    padding: 0.5rem 1rem;
+    background-color: var(--white);
+    color: var(--teal-900);
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.comment, .report {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.comment-meta {
+    font-size: 0.8rem;
+    color: var(--gray-200);
+    margin-top: 0.5rem;
+}
+
+.additional-info-section {
+    margin-top: 2rem;
+}
+
+.additional-info-input {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.additional-info-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--teal-700);
+    background-color: var(--teal-900);
+    color: var(--white);
+}
+
+.additional-info-item {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.additional-info-item button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#addCitizenBtn {
+    margin-bottom: 1rem;
+}
+
+.wanted {
+    border: 2px solid red;
+}
+
+.wanted-badge {
+    background-color: red;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#addVehicleForm,
+#addPropertyForm {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+}
+
+#addVehicleForm h4,
+#addPropertyForm h4 {
+    margin-bottom: 1rem;
+}
+
+.input-group input[type="text"],
+.input-group input[type="file"],
+.input-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--teal-700);
+    background-color: var(--teal-800);
+    color: var(--white);
+}
+
+.input-group input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.car-type-btn, .color-btn {
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+.car-type-btn {
+    background-color: var(--teal-700);
+    color: var(--white);
+}
+
+.car-type-btn:hover {
+    background-color: var(--teal-900);
+}
+
+.color-btn {
+    width: 40px;
+    height: 40px;
+    border: 2px solid transparent;
+}
+
+.color-btn.selected {
+    border-color: var(--white);
+}
+
+.delete-btn {
+    background-color: #e53e3e;
+    color: var(--white);
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.wanted-btn {
+    background-color: #e53e3e;
+}
+
+.police-report {
+    background-color: var(--teal-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.report-meta {
+    font-size: 0.8rem;
+    color: var(--gray-200);
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-container {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+#theftType, #fine, #carUsed, #weapons {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--teal-700);
+    background-color: var(--teal-900);
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.police-reports-section .report-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.police-reports-section .report-input > * {
+    margin-bottom: 0.5rem;
+}
+
